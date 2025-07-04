@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "엔트리-실시간 알림",
+  "version": "1.0",
+  "description": "엔트리에서 신규 알림 아이콘을 실시간으로 띄워줍니다.",
+  "host_permissions": [
+    "https://playentry.org/*",
+    "https://space.playentry.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://playentry.org/*",
+        "https://space.playentry.org/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+} 
